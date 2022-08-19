@@ -7,8 +7,8 @@ export const Navbar = () => {
         <div className='flex justify-between items-center'>
             <Link to="/">
                 <p className='text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded dark:bg-gray-500 dark:text-gray-900'>
-                    Googgle 
-                </p>
+                    Googgle :smile: 
+                </p> 
             </Link>
         </div>
     </div>
