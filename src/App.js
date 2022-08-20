@@ -10,7 +10,7 @@ function App() {
   return (
     <div className={darkThem ? "dark" : ''}>
       <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen">
-        <Navbar />
+        <Navbar darkThem={darkThem} setDarkThem={setDarkThem} />
         <Routes /> 
         <Footer />
       </div>
