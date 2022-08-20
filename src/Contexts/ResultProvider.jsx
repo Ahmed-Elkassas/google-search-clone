@@ -23,7 +23,8 @@ export const ResultProvider = ({ children }) => {
       },
     });
 
-    const data = response.json();
+    const data = await response.json();
+    console.log(data);
     setResults(data);
     setIsLoading(false);
   };
