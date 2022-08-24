@@ -16,6 +16,6 @@ export const Search = () => {
   }, [debouncedValue])
 
   return (
-    <div>Search</div>
+    <div className='relative sm:ml-48 md:ml-72'></div>
   )
 }
