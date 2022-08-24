@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { Results } from './Results';
 
 export const RoutesComp = () => {
-  const renderMultiResults = ['/search', '/images', '/news', 'videos'].map((path, index) => {
+  const renderMultiResults = ['/search', '/image', '/news', 'videos'].map((path, index) => {
     return <Route path={path} element={<Results />} key={index} />
   })
 

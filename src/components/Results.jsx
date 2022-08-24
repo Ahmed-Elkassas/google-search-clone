@@ -10,8 +10,14 @@ export const Results = () => {
   const location = useLocation();
   
       useEffect(() => {
-        getResults('/search/q=Javascript&num=20')
-      }, [])
+        if(searchTerm !== "") {
+          if(location.pathname === '/videos') {
+            getResults(`/search/q=${searchTerm} videos`)
+          } else {
+            getResults(`${location.pathname}/q=${searchTerm}&num=30`)
+          }
+        }
+      }, [searchTerm, location.pathname])
 
   if(isLoading) return <div className='text-center'>Loading</div>;
 
@@ -28,8 +34,15 @@ export const Results = () => {
             </div>
           ))}
         </div>);
-    case '/images':
-      return 'images'
+    case '/image':
+      return <div className='flex justify-between items-center flex-wrap'>
+        {results?.image_results.map(({image, link: {href, title}}, index) => (
+          <a href={href} target="_blank" key={index} rel="noreferrer">
+            <img src={image.src} alt={title} loading="lazy" />
+            <p className='w-36 break-words text-sm mt-2'>{title}</p>
+          </a>
+        ) )}
+      </div>
   
     default:
       return 'Error!';
