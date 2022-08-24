@@ -16,6 +16,10 @@ export const Search = () => {
   }, [debouncedValue])
 
   return (
-    <div className='relative sm:ml-48 md:ml-72'></div>
+    <div className='relative sm:ml-48 md:ml-72 sm:-mt-10 mt-3'>
+      <input value={text} type="text" onChange={(event) => setText(event.target.value)} className='sm:w-96 w-80 h-10 dark:bg-gray-200 border rounded-full outline-none shadow-sm px-3 focus:shadow-lg dark:text-gray-900' />
+      {text &&
+      <button className='absolute top-0.5 right-4 text-2xl text-gray-800' onClick={() => setText("")}>x</button>}
+    </div>
   )
 }
