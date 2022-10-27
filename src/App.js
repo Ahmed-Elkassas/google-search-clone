@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Navbar} from "./components/Navbar";
-import {Routes} from './components/Routes';
+import {RoutesComp} from './components/RoutesComp';
 import {Footer} from './components/Footer';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className={darkThem ? "dark" : ''}>
       <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen">
         <Navbar darkThem={darkThem} setDarkThem={setDarkThem} />
-        <Routes /> 
+        <RoutesComp /> 
         <Footer />
       </div>
     </div>
